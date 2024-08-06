@@ -1,6 +1,6 @@
-calcularValorDescuento=function(valorealunitario,descuento){
+calcularValorDescuento=function(montosubtotal,descuento){
     let descuentoT=descuento/100
-    let Vdescuento=valorealunitario*descuentoT
+    let Vdescuento=montosubtotal*descuentoT
     return Vdescuento
 }
 
