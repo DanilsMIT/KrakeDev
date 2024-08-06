@@ -28,10 +28,17 @@ saludos=function(){
     let result=(caja+" "+cajaA)
     showtext("showresult",result)
 
+    showpicture("img","./picturesU/gatogolpes.gif")
+
     console.log(caja,cajaA,cajaB,cajaC)
 }
 
 showtext=function(idtxt,message){
     let boxrecover = document.getElementById(idtxt);
     boxrecover.innerText=message
+}
+
+showpicture=function(idpicture,picture){
+let recoverimg = document.getElementById(idpicture)
+recoverimg.src= picture
 }
