@@ -10,7 +10,7 @@ calcularValorTotal = function () {
     let valorDescuento
     let valorIVA
     let valorTotal
-    valorTotal=calcularValorTotal(valorSubtotal,valorDescuento,valorIVA)
+    valorTotal=calcularTotal(valorSubtotal,valorDescuento,valorIVA)
 
     //1. Recuperar el nombre del producto como String
     nombreProducto=recuperarTexto("txtProducto");
@@ -35,7 +35,7 @@ calcularValorTotal = function () {
             Subtotal esperado: 54
         Si el caso de prueba es exitoso, hacer un commit
      */
-    mostrarTexto(lblSubtotal,valorSubtotal)
+    mostrarTexto("lblSubtotal",valorSubtotal)
 
 
 
@@ -97,7 +97,7 @@ calcularValorTotal = function () {
 
 
 
-                
+
     //13. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     /*
         Ejemplo: 

@@ -14,6 +14,6 @@ calcularValorSubtotal=function(precio,cantidad){
     return Vsubtotal
 }
 
-calcularValorTotal=function(subtotal,descuento,iva){
+calcularTotal=function(subtotal,descuento,iva){
     let Vtotal= (subtotal-descuento)+iva
 }
