@@ -30,6 +30,8 @@ saludos=function(){
 
     showpicture("img","./picturesU/gatogolpes.gif")
 
+    showtxtinbox("boxtxt","")
+
     console.log(caja,cajaA,cajaB,cajaC)
 }
 
@@ -41,4 +43,9 @@ showtext=function(idtxt,message){
 showpicture=function(idpicture,picture){
 let recoverimg = document.getElementById(idpicture)
 recoverimg.src= picture
+}
+
+showtxtinbox=function(idtxt,change){
+    let recoverbox=document.getElementById(idtxt)
+    recoverbox.value=change
 }
