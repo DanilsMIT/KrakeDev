@@ -114,13 +114,28 @@ calcularValorTotal = function () {
     let resumen=("Valor total a pagar por "+cantidad+" "+nombreProducto+" con un "+porcentajeDescuento+"%"+" de descuento, incluido su IVA, son: "+valorTotal+"$")
     mostrarTexto("lblResumen",resumen)
 
+    limpiar();
 
 }
+
 limpiar = function () {
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
         Si funciona, hacer un commit
      */
-}
+    let ctxt=("");
+    let cnI=("0"); 
+    let cnF=("0.0");
+
+    let clean1=mostrarTextoEnCaja("txtProducto",ctxt);
+    let clean2=mostrarTextoEnCaja("txtCantidad",cnI);
+    let clean3=mostrarTextoEnCaja("txtPrecio",cnF);
+    let clean4=mostrarTextoEnCaja("txtPorcentajeDescuento",cnI);
+
+    let clean5=mostrarTexto("lblSubtotal",cnF);
+    let clean6=mostrarTexto("lblDescuento",cnF);
+    let clean7=mostrarTexto("lblValorIVA",cnF);
+    let clean8=mostrarTexto("lblTotal",cnF);
+} 
 /* SI TODO FUNCIONA, HACER UN PUSH */
