@@ -8,11 +8,19 @@ calcularPromedioNotas=function(){
     let fixedp=p.toFixed(2);
 
     let boxmsg=("Su promedio es: "+fixedp)
-    let recoverbox
-    recoverbox=mostrarTexto("promresult",boxmsg)
+    mostrarTexto("promresult",boxmsg)
 
-    if(fixedp>6.99){
+    if(fixedp<5 && fixedp>0){
+        mostrarTexto("ARE","REPROBADO")
+        mostrarImagen("picture","./reprobado.gif")
+    }else if(fixedp>=5 && fixedp<=8){
+        mostrarTexto("ARE","BIEN HECHO")
         mostrarImagen("picture","./gil-catsucess.gif")
-     }else{mostrarImagen("picture","./u died.gif")}
-
+    }else if(fixedp>8 && fixedp<=10){
+        mostrarTexto("ARE","SOBRESALIENTE")
+        mostrarImagen("picture","./excelente.gif")
+    }else{
+        mostrarTexto("ARE","DATOS ERRONEOS")
+        mostrarImagen("picture","./error.gif")
+    }
 }
