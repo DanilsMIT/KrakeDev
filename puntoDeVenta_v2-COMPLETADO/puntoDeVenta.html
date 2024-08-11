@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="utilitarios.js"></script>
+    <script src="serviciosPuntoDeVenta.js"></script>
+    <script src="puntoDeVenta.js"></script>
+    <link href="puntoDeVenta.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="principal">
+        <div class="logoEscuela">
+            <img src="./logoKrakeDev.png" width="80%" />
+        </div>
+
+        <div>
+            <div class="titulo">
+                PUNTO DE VENTA
+            </div>
+
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    Producto:
+                </div>
+                <input type="text" class="cajaTexto" id="txtProducto" />
+            </div>
+            <div class="error" id="lblError3"></div>
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    Cantidad:
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtCantidad" />
+                </div>
+            </div>
+            <div class="error" id="lblError1"></div>
+
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    Precio:
+                </div>
+                <input type="text" class="cajaTexto" id="txtPrecio" />
+            </div>
+            <div class="error" id="lblError2"></div>
+
+
+            <div class="botones">
+                <div class="contenedorBoton">
+                    <input type="button" value="TOTAL" class="estiloBoton" onclick="calcularValorTotal()" />
+                    <input type="button" value="CLEAN" class="estiloBoton" onclick="limpiar()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="areaResultado">
+            <div class="resultado">
+                <h3>Subtotal</h3>
+                <h3 id="lblSubtotal">0.0</h3>
+                <h3>Descuento</h3>
+                <h3 id="lblDescuento">0.0</h3>
+                <h3>IVA 12%</h3>
+                <h3 id="lblValorIVA">0.0</h3>
+                <h3>Total</h3>
+                <h3 id="lblTotal">0.0</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
