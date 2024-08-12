@@ -128,7 +128,7 @@ obtenerProvincia = function (Placa) {
         PronvinciaIdentificada = "Napo"
     } else if (PPlaca == 83) {
         PronvinciaIdentificada = "Pastaza"
-    } else if (PPlaca = 80) {
+    } else if (PPlaca == 80) {
         PronvinciaIdentificada = "Pichincha"
     } else if (PPlaca == 75) {
         PronvinciaIdentificada = "Sucumbíos"
@@ -140,7 +140,7 @@ obtenerProvincia = function (Placa) {
         PronvinciaIdentificada = "Zamora Chinchipe"
     } else if (PPlaca == 89) {
         PronvinciaIdentificada = "Santa Elena"
-    } else { PronvinciaIdentificada = null }
+    } else { PronvinciaIdentificada = "No se encuentra registrada" }
 
     return PronvinciaIdentificada
 }
