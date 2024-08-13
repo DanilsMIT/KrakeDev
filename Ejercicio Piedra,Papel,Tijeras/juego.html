@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="juego.js"></script>
+    <script src="serviciosJuego.js"></script>
+    <script src="utilitarios.js"></script>
+    <link href="juego.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="section">
+        <div class="contenido">
+            <h1>Piedra,Papel o Tijera</h1>
+            <h1>1,2...</h1>
+            <img id="botImagen" src="./CSS/STAR.gif" class="picture" />
+            <h4 id="botImagenT">...</h4>
+            <h4 id="botImagenT2"></h4>
+        </div>
+        <div class="Partida">
+            <h2 id="Partida">Partida</h2>
+            <div class="puntaje">
+                <h2 id="PuntosPlayer">0</h2>
+                <h2>-</h2>
+                <h2 id="PuntosMaquina">0</h2>
+            </div>
+            <h2 id="FIN"></h2>
+            <img id="return" onclick="limpiar()" width="250px" />
+
+        </div>
+    </div>
+    <div class="section2">
+        <div class="retry">
+            <input type="button" value="Prepararse" class="botonclean" onclick="otraves()" />
+        </div>
+    </div>
+    <div class="section2">
+        <img src="./CSS/Piedra.png" class="boton" onclick="jugarPiedra()"  ondblclick="jugar()" />
+        <img src="./CSS/Papel.png" class="boton" onclick="jugarPapel()"  ondblclick="jugar()" />
+        <img src="./CSS/Tijeras.png" class="boton" onclick="jugarTijera()"  ondblclick="jugar()" />
+    </div>
+
+    </div>
+</body>
+
+</html>
