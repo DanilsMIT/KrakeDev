@@ -47,7 +47,7 @@ guardarPalabra = function () {
     } else {
         secretWord = null
         console.log(secretWord)
-        alert("¡La palabra solo se compone de 5 caracteres mayúsculas!")
+        alert("¡LA PALABRA SOLO SE COMPONE DE 5 LETRAS MAYÚSCULAS!")
     }
 }
 
@@ -80,5 +80,14 @@ for(a=0;a>secretWord.length;a++){
         letrasEncontradas=letrasEncontradas+1
     }
 }
+
+}
+
+IngresarLetra=function(){
+    let letra=recuperarTexto("txtLetra")
+
+    if(esMayuscula(letra)){
+        validarLetra(letra)
+    }else{alert("¡SOLO SE JUEGA CON LETRAS MAYÚSCULAS!")}
 
 }
