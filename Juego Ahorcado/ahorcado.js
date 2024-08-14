@@ -52,6 +52,8 @@ guardarPalabra = function () {
 }
 
 showLetra=function(letra,posicion){
+
+
     if(posicion==0){
         mostrarTexto("div0",letra)
     }else if(posicion==1){
@@ -63,5 +65,20 @@ showLetra=function(letra,posicion){
     }else if(posicion==4){
         mostrarTexto("div4",letra)
     }
+
+}
+
+validarLetra=function(letra){
+let letrasEncontradas
+
+let compararLetra
+for(a=0;a>secretWord.length;a++){
+    compararLetra=secretWord.charAt(a)
+
+    if(letra==compararLetra){
+        showLetra(letra,a)
+        letrasEncontradas=letrasEncontradas+1
+    }
+}
 
 }
