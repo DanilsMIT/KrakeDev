@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"/>
+    <script src="COSTUMERS.JS"></script>
+    <script src="utilitarios.js"></script>
+</html>
+<body>
+    <h4>AÑADIR CLIENTE</h4>
+    <h5>Ingrese la cédula</h5>
+    <input type="text" id="Cci"/>
+    <h5>Ingrese el nombre</h5>
+    <input type="text" id="Nonmbre"/>
+    <h5>Ingrese el edad</h5>
+    <input type="text" id="eAge"/>
+    <input type="button" value="AGREGAR" onclick="CREATEcostumber()"/>
+    <input type="button" value="Modificar Cliente" onclick="agregarCambios()"/>
+
+    <input type="button" value="MOSTRAR LISTA" onclick="mostrarClientes()"/>
+    <h4>BUSCAR CLIENTE</h4>
+    <h5>Ingrese la cédula</h5>
+    <input type="text" id="CciB"/>
+    <input type="button" value="buscar" onclick="EjecuarBusqueda()"/>
+
+    <div id="tablitaClientes"></div>
+
+</body>
