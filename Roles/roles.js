@@ -3,6 +3,7 @@ let empleados = [
     { cedula: "0914632123", nombre: "Luisa", apellido: "Gonzalez", sueldo: 900.0 },
     { cedula: "1807542324", nombre: "Ramiro", apellido: "Haro", sueldo: 1100.0 }
 ]
+let esNew=false
 
 mostrarOptionEmpleado = function () {
     mostrarComponente("divEmpleado")
@@ -45,4 +46,19 @@ showEmployees = function () {
 
     TablitaEmpleados += "</table>"
     TablitaEmpleadosID.innerHTML = TablitaEmpleados
+
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
+}
+
+ejecutarNuevo=function(){
+    esNew=true
+    habilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
 }
