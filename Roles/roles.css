@@ -4,20 +4,25 @@ body{
     margin-right: 0px;
 }
 tbody tr:nth-child(odd) {
-    background-color: #f9f99f;
-  }
-  
-  tbody tr:nth-child(even) {
     background-color: #e2c000;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #f9f99f;
   }
   
   table {
     background-color: #0b0c0c;
     width: 105%;
+    font-family: cursive;
+    border: 3.1px solid #0b0c0c;
+    border-collapse: collapse;
   }
   td{
     text-align: center;
-    font-family: cursive;
+  }
+  th{
+    padding: 2px;
+    text-transform: capitalize;
   }
   .areaTabla{
     margin-top: 25px;

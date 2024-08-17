@@ -25,10 +25,10 @@ mostrarOptionResumen = function () {
 showEmployees = function () {
     let TablitaEmpleadosID = document.getElementById("tablaEmpleados")
     let TablitaEmpleados = "<table><tr>"
-        + "<td>Cédula</td>"
-        + "<td>Nombre</td>"
-        + "<td>Apellido</td>"
-        + "<td>Sueldo</td>"
+        + "<th>Cédula</th>"
+        + "<th>Nombre</th>"
+        + "<th>Apellido</th>"
+        + "<th>Sueldo</th>"
         + "</tr>"
 
     let Employee
