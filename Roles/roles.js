@@ -3,7 +3,74 @@ let empleados = [
     { cedula: "0914632123", nombre: "Luisa", apellido: "Gonzalez", sueldo: 900.0 },
     { cedula: "1807542324", nombre: "Ramiro", apellido: "Haro", sueldo: 1100.0 }
 ]
+
+let Roles = [
+    { cedula: "", nombre: "", sueldo: "", valorApagar: "", aporteEmpleado: "", aporteEmpleador: "" }
+]
 let esNew = false
+
+buscarRol = function (ciEmployee) {
+
+    let RoL
+    for (r = 0; r < Roles.length; r++) {
+        RoL = Roles[r]
+
+        if (ciEmployee == RoL.cedula) {
+            break
+        } else { RoL = null }
+
+        return RoL
+    }
+}
+
+agregarRol=function(Rol){
+    let RoLInexistente=null
+    let RoL
+    for (r = 0; r < Roles.length; r++) {
+        RoL = Roles[r]
+
+        if (Rol.cedula == RoL.cedula) {
+            alert("La cédula corresponde a "+RoL.nombre)
+            RoLInexistente=false
+            break
+        }
+        RoLInexistente=true
+    }
+
+    if(RoLInexistente==true){
+        alert("Nuevo Rol agregado")
+        Roles.push(Rol)
+
+    }
+}
+
+calcularAporteEmpleador=function(salaryEmployee){
+    let AporteEMPLEADOR=salaryEmployee*0.01115
+    return AporteEMPLEADOR
+}
+
+guardarRol=function(){
+    let Empleado=recuperarTextoDIV("infoNombre");
+    let EmpleadoCI=recuperarTextoDIV("infoCedula");
+    let Empleadosalary=recuperarFloatDIV("infoSueldo");
+    let EmpleadoAporte=recuperarFloatDIV("infoIESS");
+    let EmpleadoTotalApagar=recuperarFloatDIV("infoPago");
+    let EmpleadoRAporte=calcularAporteEmpleador(Empleadosalary);
+
+    let newRol={}
+    newRol.cedula=EmpleadoCI;
+    newRol.nombre=Empleado ;
+    newRol.sueldo=Empleadosalary;
+    newRol.valorApagar= EmpleadoTotalApagar;
+    newRol.aporteEmplead=EmpleadoAporte;
+    newRol.aporteEmpleador=EmpleadoRAporte;
+
+    agregarRol(newRol)
+}
+
+
+
+
 
 mostrarOptionEmpleado = function () {
     mostrarComponente("divEmpleado")
@@ -16,11 +83,14 @@ mostrarOptionRol = function () {
     ocultarComponente("divEmpleado")
     mostrarComponente("divRol")
     ocultarComponente("divResumen")
+    deshabilitarComponente("BTNRsave");
+
 }
 mostrarOptionResumen = function () {
     ocultarComponente("divEmpleado")
     ocultarComponente("divRol")
     mostrarComponente("divResumen")
+
 }
 
 showEmployees = function () {
@@ -227,46 +297,46 @@ ejecutarSearch = function () {
     }
 }
 
-CLEAN=function(){
-    mostrarTextoEnCaja("txtCedula","")
-    mostrarTextoEnCaja("txtNombre","")
-    mostrarTextoEnCaja("txtApellido","")
-    mostrarTextoEnCaja("txtSueldo","")
+CLEAN = function () {
+    mostrarTextoEnCaja("txtCedula", "")
+    mostrarTextoEnCaja("txtNombre", "")
+    mostrarTextoEnCaja("txtApellido", "")
+    mostrarTextoEnCaja("txtSueldo", "")
 
     BloquearComponentes();
-    esNew=false
+    esNew = false
 }
 
-BuscarPorROl=function(){
-    let buscarbyCI=recuperarTexto("txtBusquedaCedulaRol")
-    let EmpleadoFounded=buscarEmpleado(buscarbyCI)
+BuscarPorROl = function () {
+    let buscarbyCI = recuperarTexto("txtBusquedaCedulaRol")
+    let EmpleadoFounded = buscarEmpleado(buscarbyCI)
 
-    if(EmpleadoFounded!=null){
-        mostrarTexto("infoCedula",EmpleadoFounded.cedula)
-        mostrarTexto("infoNombre",EmpleadoFounded.nombre+" "+EmpleadoFounded.apellido)
-        mostrarTexto("infoSueldo",EmpleadoFounded.sueldo)
-    }else{ alert("No hay registro de este empleado")}
+    if (EmpleadoFounded != null) {
+        mostrarTexto("infoCedula", EmpleadoFounded.cedula)
+        mostrarTexto("infoNombre", EmpleadoFounded.nombre + " " + EmpleadoFounded.apellido)
+        mostrarTexto("infoSueldo", EmpleadoFounded.sueldo)
+    } else { alert("No hay registro de este empleado") }
 }
 
-calcularAporteEmpleado=function(salary){
-    let aporte=salary*0.0945
+calcularAporteEmpleado = function (salary) {
+    let aporte = salary * 0.0945
 
     return aporte
 }
 
-calcularTotalAPagar=function(salary,IESS,Disccount){
-    let Totallity=salary-IESS-Disccount
+calcularTotalAPagar = function (salary, IESS, Disccount) {
+    let Totallity = salary - IESS - Disccount
 
     return Totallity
 }
 
-calcularRol=function(){
-    let salaryEmployee= recuperarIntDIV("infoSueldo")
-    let AporteEmployee=calcularAporteEmpleado(salaryEmployee)
+calcularRol = function () {
+    let salaryEmployee = recuperarIntDIV("infoSueldo")
+    let AporteEmployee = calcularAporteEmpleado(salaryEmployee)
 
-    let disccountEmployee=recuperarFloat("txtDescuentos")
+    let disccountEmployee = recuperarFloat("txtDescuentos")
     let DisccountAprobado;
-    if (disccountEmployee < 0|| disccountEmployee > salaryEmployee) {
+    if (disccountEmployee < 0 || disccountEmployee > salaryEmployee) {
         mostrarTexto("lblErrorDescuentos", "EL DESCUENTO NO CORRESPONDE A UN MONTO COHERENTE")
         DisccountAprobado = false
     } else if (isNaN(disccountEmployee)) {
@@ -277,13 +347,13 @@ calcularRol=function(){
         mostrarTexto("lblErrorDescuentos", "")
     }
 
-    
-    if(DisccountAprobado==true){
-    mostrarTexto("infoIESS",AporteEmployee)
-    let PAGO=calcularTotalAPagar(salaryEmployee,AporteEmployee,disccountEmployee)
-    let pagofixed=PAGO.toFixed(2)
-    mostrarTexto("infoPago",pagofixed)
-    
+
+    if (DisccountAprobado == true) {
+        mostrarTexto("infoIESS", AporteEmployee)
+        let PAGO = calcularTotalAPagar(salaryEmployee, AporteEmployee, disccountEmployee)
+        let pagofixed = PAGO.toFixed(2)
+        mostrarTexto("infoPago", pagofixed)
+        habilitarComponente("BTNRsave");
     }
 
 }
