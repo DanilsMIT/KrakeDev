@@ -236,3 +236,54 @@ CLEAN=function(){
     BloquearComponentes();
     esNew=false
 }
+
+BuscarPorROl=function(){
+    let buscarbyCI=recuperarTexto("txtBusquedaCedulaRol")
+    let EmpleadoFounded=buscarEmpleado(buscarbyCI)
+
+    if(EmpleadoFounded!=null){
+        mostrarTexto("infoCedula",EmpleadoFounded.cedula)
+        mostrarTexto("infoNombre",EmpleadoFounded.nombre+" "+EmpleadoFounded.apellido)
+        mostrarTexto("infoSueldo",EmpleadoFounded.sueldo)
+    }else{ alert("No hay registro de este empleado")}
+}
+
+calcularAporteEmpleado=function(salary){
+    let aporte=salary*0.0945
+
+    return aporte
+}
+
+calcularTotalAPagar=function(salary,IESS,Disccount){
+    let Totallity=salary-IESS-Disccount
+
+    return Totallity
+}
+
+calcularRol=function(){
+    let salaryEmployee= recuperarIntDIV("infoSueldo")
+    let AporteEmployee=calcularAporteEmpleado(salaryEmployee)
+
+    let disccountEmployee=recuperarFloat("txtDescuentos")
+    let DisccountAprobado;
+    if (disccountEmployee < 0|| disccountEmployee > salaryEmployee) {
+        mostrarTexto("lblErrorDescuentos", "EL DESCUENTO NO CORRESPONDE A UN MONTO COHERENTE")
+        DisccountAprobado = false
+    } else if (isNaN(disccountEmployee)) {
+        mostrarTexto("lblErrorDescuentos", "EL DESCUENTO SOLO DEBE ESTAR DIGITADO EN NÚMEROS")
+        DisccountAprobado = false
+    } else {
+        DisccountAprobado = true
+        mostrarTexto("lblErrorDescuentos", "")
+    }
+
+    
+    if(DisccountAprobado==true){
+    mostrarTexto("infoIESS",AporteEmployee)
+    let PAGO=calcularTotalAPagar(salaryEmployee,AporteEmployee,disccountEmployee)
+    let pagofixed=PAGO.toFixed(2)
+    mostrarTexto("infoPago",pagofixed)
+    
+    }
+
+}
