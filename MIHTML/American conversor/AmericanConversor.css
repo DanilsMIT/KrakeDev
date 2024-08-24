@@ -1,0 +1,137 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sections{
+    background-color: rgb(29, 0, 103);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.botonSection{
+    background-color: rgb(29, 0, 103);
+    font-family: cursive;
+    font-size: 20px;
+    color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50px;
+}
+
+.ContenidoPerSeccion{
+    display: flex;
+    flex-direction: row;
+}
+.botonContenidos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 26%;
+}
+.botonContenidos2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 27%;
+}
+.botonContenidos3{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+}
+.botoncontent{
+    background-color: rgb(155, 0, 0);
+    font-family: cursive;
+    font-size: 20px;
+    color: white;
+    margin-top: 2px;
+    border-radius: 50px;
+    
+}
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+}
+
+.s1{
+    font-size: 140%;
+    border-radius: 40px;
+    background-color: rgb(29, 0, 103);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 5px;
+
+}
+
+.cajita{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    font-size: 20px;
+
+}
+.cajitaf{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    font-size: 20px;
+    width: 20px;
+
+}
+
+.botonCALCULATE{
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(155, 0, 0);
+    font-family: cursive;
+}
+.botonCALCULATEf{
+    border-radius: 50px;
+    color: rgba(255, 251, 0, 0.97);
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+}
+
+.piedePagina{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: cursive;
+    margin-top: 200px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+p{
+    margin-left: 10px;
+    margin-bottom: 1px;
+
+}
+h1{
+    margin-left: 10px;
+    margin-bottom: -10px;
+    margin-top: 1px;
+}
+
+.flexometro{
+    background-color: yellow;
+    font-family: cursive;
+    border-radius: 40px;
+    padding-left: 25px;
+    padding-top: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.flexo{
+    margin-left: 30px;
+}
+
+.descripcion{
+    margin-top: 15px;
+}

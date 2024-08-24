@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="AmericanConversor.css" rel="stylesheet" />
+    <script src="AmericanConversor.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body onload="DIVdistancia()">
+    <div class="logo">
+        <img src="./Imagenes/logo.jpeg" width="15%" />
+    </div>
+    <div class="sections">
+        <input type="button" value="Distancia" class="botonSection" onclick="DIVdistancia();" />
+        <input type="button" value="Temperatura-cantidades" class="botonSection" onclick="DIVtemperatura();" />
+        <input type="button" value="Peso" class="botonSection" onclick="DIVpeso();" />
+    </div>
+
+    <div id="Distancia">
+        <div class="ContenidoPerSeccion">
+            <div class="botonContenidos">
+                <input type="button" value="Pulgadas - Centímetros" class="botoncontent" onclick="divPC();" />
+                <input type="button" value="Pies - Metros" class="botoncontent" onclick="divPM();" />
+                <input type="button" value="Millas - Kilómetros" class="botoncontent" onclick="divMK();" />
+            </div>
+
+            <div class="calculadora">
+                <div class="s1" id="ds1">
+                    <h2>Pulgadas a Centímetros</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...cm</h4>
+                    <h2>Centímetros a Pulgadas</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...''</h4>
+                </div>
+                <div class="s1" id="ds2">
+                    <h2>Pies a Metros</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...m</h4>
+                    <h2>Metros a Pies</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...pies</h4>
+                </div>
+                <div class="s1" id="ds3">
+                    <h2>Millas a Kilómetros</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...km</h4>
+                    <h2>Kilómetros a Millas</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...millas</h4>
+                </div>
+            </div>
+        </div>
+        <div id="flexito">
+            <div class="flexometro">
+                <div class="flexo">
+                    <h2>Uso del flexometro</h2>
+                    <img src="./Imagenes/flexometroexplicado.png" width="280px" />
+                </div>
+                <div class="flexo">
+                    <div class="descripcion">
+                        Para la lectura decimal en pulgadas en<br>
+                        una cinta metrica, esta representada<br>
+                        por un número entero adicionado con<br>
+                        una parte en quebrado.
+
+                    </div>
+                    <div class="descripcion">
+                        A los quebrados como se los tome,<br>
+                        representan una medida decimal<br>
+                        al dividir su númerador con el<br>
+                        denominador respectivo<br>
+                    </div>
+                </div>
+                <div class="flexo">
+                    <div class="descripcion">
+                        <h3>Tome su flexometro y calcule su pulgada decimal</h3>
+                        <input type="text" class="cajitaf">'' + <input type="text" class="cajitaf">/<input type="text"
+                            class="cajitaf">
+                        <input type="button" value="CALCULAR" class="botonCALCULATEf" />
+                        <h3>...''</h3>
+                        <h3> Nota: Cada 12 pulgadas es 1 pie</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Temperatura">
+        <div class="ContenidoPerSeccion">
+            <div class="botonContenidos2">
+                <input type="button" value="Celsius - Fahrenheit " class="botoncontent" onclick="divCF();" />
+                <input type="button" value="Galones - Litros" class="botoncontent" onclick="divGL();" />
+            </div>
+            <div class="calculadora">
+                <div class="s1" id="ts1">
+                    <h2>Fahrenheit a Celsius</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...°C</h4>
+                    <h2>Celsius a Fahrenheit</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...°F</h4>
+                </div>
+                <div class="s1" id="ts2">
+                    <h2>Galones a Litros</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...lt</h4>
+                    <h2>Litros a Galones</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...galones</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Peso">
+        <div class="ContenidoPerSeccion">
+            <div class="botonContenidos3">
+                <input type="button" value="Libras - Kg" class="botoncontent" onclick="divOG();" />
+                <input type="button" value="Onza - Gramos" class="botoncontent" onclick="divLKg();" />
+            </div>
+            <div class="calculadora">
+                <div class="s1" id="ps1">
+                    <h2>Onza a Gramos</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...gr</h4>
+                    <h2>Gramos a Onza</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...onzas</h4>
+                </div>
+                <div class="s1" id="ps2">
+                    <h2>Libras a Kilogramos</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ptc">...kg</h4>
+                    <h2>Kilogramos a Libras</h2>
+                    <input type="text" class="cajita" />
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <h4 id="resultado ctp">...libras</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="piedePagina">
+        <h1>Sobre el uso</h1>
+        <p>
+            Razón de uso del conversor americano, se refleja en la inexactitud para convertir grandes cantidades de las
+            medidas americanas al Sistema Internacional de Unidades(SI) y de algunas medidas hispanas.
+        </p>
+    </div>
+</body>
