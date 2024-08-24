@@ -28,33 +28,33 @@
             <div class="calculadora">
                 <div class="s1" id="ds1">
                     <h2>Pulgadas a Centímetros</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <input type="text" class="cajita" id="pulgada"/> ''
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="PtoC()"/>
                     <h4 id="resultado ptc">...cm</h4>
                     <h2>Centímetros a Pulgadas</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
+                    <input type="text" class="cajita" id="cm"/> cm
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="CtoP()" />
                     <h4 id="resultado ctp">...''</h4>
                 </div>
                 <div class="s1" id="ds2">
                     <h2>Pies a Metros</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...m</h4>
+                    <input type="text" class="cajita" id="pie"/> pies
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="PtoM()" />
+                    <h4 id="resultado ptc2">...m</h4>
                     <h2>Metros a Pies</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...pies</h4>
+                    <input type="text" class="cajita" id="m"/> m
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="MtoP()" />
+                    <h4 id="resultado ctp2">...pies</h4>
                 </div>
                 <div class="s1" id="ds3">
                     <h2>Millas a Kilómetros</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...km</h4>
+                    <input type="text" class="cajita" id="milla"/> millas
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="Mtokm()" />
+                    <h4 id="resultado ptc3">...km</h4>
                     <h2>Kilómetros a Millas</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...millas</h4>
+                    <input type="text" class="cajita" id="km"/> km
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="kmtoM()" />
+                    <h4 id="resultado ctp3">...millas</h4>
                 </div>
             </div>
         </div>
@@ -68,8 +68,8 @@
                     <div class="descripcion">
                         Para la lectura decimal en pulgadas en<br>
                         una cinta metrica, esta representada<br>
-                        por un número entero adicionado con<br>
-                        una parte en quebrado.
+                        por un número entero adicionado una<br>
+                        parte en quebrado.
 
                     </div>
                     <div class="descripcion">
@@ -82,10 +82,10 @@
                 <div class="flexo">
                     <div class="descripcion">
                         <h3>Tome su flexometro y calcule su pulgada decimal</h3>
-                        <input type="text" class="cajitaf">'' + <input type="text" class="cajitaf">/<input type="text"
-                            class="cajitaf">
-                        <input type="button" value="CALCULAR" class="botonCALCULATEf" />
-                        <h3>...''</h3>
+                        <input type="text" class="cajitaf" id="pulgadaInt">'' + <input type="text" class="cajitaf" id="numerador">/<input type="text"
+                            class="cajitaf" id="denominador">
+                        <input type="button" value="CALCULAR" class="botonCALCULATEf" onclick="PulgadaDecimal()"/>
+                        <h3 id="resultado flexo">...''</h3>
                         <h3> Nota: Cada 12 pulgadas es 1 pie</h3>
                     </div>
                 </div>
@@ -101,23 +101,23 @@
             <div class="calculadora">
                 <div class="s1" id="ts1">
                     <h2>Fahrenheit a Celsius</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...°C</h4>
+                    <input type="text" class="cajita" id="F"/> °F
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="FtoC()" />
+                    <h4 id="resultado pt">...°C</h4>
                     <h2>Celsius a Fahrenheit</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...°F</h4>
+                    <input type="text" class="cajita" id="C"/> °C
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="CtoF()" />
+                    <h4 id="resultado ct">...°F</h4>
                 </div>
                 <div class="s1" id="ts2">
                     <h2>Galones a Litros</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...lt</h4>
+                    <input type="text" class="cajita" id="g"/> galones
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="GtoLT()" />
+                    <h4 id="resultado pt2">...lt</h4>
                     <h2>Litros a Galones</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...galones</h4>
+                    <input type="text" class="cajita" id="lt"/> lt
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="LTtoG()" />
+                    <h4 id="resultado ct2">...galones</h4>
                 </div>
             </div>
         </div>
@@ -131,23 +131,23 @@
             <div class="calculadora">
                 <div class="s1" id="ps1">
                     <h2>Onza a Gramos</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...gr</h4>
+                    <input type="text" class="cajita" id="o"/> onzas
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="OtoGR()" />
+                    <h4 id="resultado tc">...gr</h4>
                     <h2>Gramos a Onza</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...onzas</h4>
+                    <input type="text" class="cajita" id="gr"/> gr
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="GRtoO()" />
+                    <h4 id="resultado tp">...onzas</h4>
                 </div>
                 <div class="s1" id="ps2">
                     <h2>Libras a Kilogramos</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ptc">...kg</h4>
+                    <input type="text" class="cajita" id="lb"/> lb
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="LBtoKG()" />
+                    <h4 id="resultado tc2">...kg</h4>
                     <h2>Kilogramos a Libras</h2>
-                    <input type="text" class="cajita" />
-                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="" />
-                    <h4 id="resultado ctp">...libras</h4>
+                    <input type="text" class="cajita" id="kg"/> kg
+                    <input type="button" value="CALCULAR" class="botonCALCULATE" onclick="KGtoLB()" />
+                    <h4 id="resultado tp2">...libras</h4>
                 </div>
             </div>
 
